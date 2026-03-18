@@ -1,6 +1,6 @@
 # Wenli Fei — Portfolio
 
-Live site: `https://WenliFei417.github.io/`
+Live site: `https://`
 
 This repository contains my personal portfolio website — a fast, responsive static site showcasing my software engineering projects and technical skills.
 
