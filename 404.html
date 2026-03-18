@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Wenli Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='13'>❌</text></svg>"
+    type="image/svg+xml">
+
+  <meta name="description" content="Sorry, this page does not exist on Wenli's portfolio site. Return to the homepage to explore projects, experience, and contact information.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <base href="/">
+
+  <meta property="og:title" content="Page Not Found | Wenli Portfolio">
+  <meta property="og:description" content="Sorry, this page does not exist on Wenli's portfolio site.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/404.png">
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    background: #fafafa;
+    color: #2d2b2b;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .error {
+    flex: 1 1 350px;
+    max-width: 500px;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .cta {
+    margin-top: 2rem;
+  }
+
+  .cta-back {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-back::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .cta-back:hover::before {
+    transform: translateX(100%);
+  }
+
+  .cta-back:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .cta-back:active {
+    transform: scale(0.95);
+  }
+
+  .hero-img {
+    flex: 1 1 300px;
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    animation: MoveUpDown 2s ease-in-out infinite alternate-reverse both;
+  }
+
+  @keyframes MoveUpDown {
+    0% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .error {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .hero-img {
+      max-width: 300px;
+    }
+  }
+</style>
+
+<body>
+  <section class="container">
+    <div class="error">
+      <h1>Page Not Found</h1>
+      <p>Sorry, the page you are looking for does not exist or may have been moved.</p>
+      <div class="cta">
+        <button class="cta-back" onclick="window.location.href='/'">Go to homepage</button>
+      </div>
+    </div>
+    <img src="/assets/404.png" alt="404 illustration" class="hero-img" />
+  </section>
+
+  <script>
+    const messages = [
+      {
+        title: "Page Not Found",
+        text: "Sorry, the page you are looking for does not exist or may have been moved.",
+        cta: "Go to homepage"
+      },
+      {
+        title: "This page is unavailable",
+        text: "The link may be broken, or the page may have been removed.",
+        cta: "Return home"
+      },
+      {
+        title: "We couldn't find that page",
+        text: "Please check the URL or head back to the homepage.",
+        cta: "Back to homepage"
+      },
+      {
+        title: "Oops, wrong page",
+        text: "The page you requested is not available on this site.",
+        cta: "Visit homepage"
+      }
+    ];
+
+    const random = messages[Math.floor(Math.random() * messages.length)];
+    document.querySelector('.error h1').textContent = random.title;
+    document.querySelector('.error p').textContent = random.text;
+    document.querySelector('.cta-back').textContent = random.cta;
+  </script>
+</body>
+</html>
