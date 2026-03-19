@@ -1,6 +1,6 @@
 # Wenli Fei — Portfolio
 
-Live site: `https://https://wenli-portfolio.vercel.app/`
+Live site: `https://wenli-portfolio.vercel.app/`
 
 This repository contains my personal portfolio website — a fast, responsive static site showcasing my software engineering projects and technical skills.
 
